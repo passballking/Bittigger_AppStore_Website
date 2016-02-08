@@ -1,0 +1,15 @@
+<div class="container-fluid">
+	<table ng-repeat="rowNo in [0,1,2,3,4,5,6,7,8,9] track by rowNo">
+		<tr>
+			<td rowspan="2" class="col-sm-1">{{appInfos[rowNo].appid}}</td>
+			<td rowspan="2" class="col-sm-1"><img src="{{appInfos[rowNo].thumbnail_url}}" class="img-thumbnail"></td>
+			<td class="col-sm-3">{{appInfos[rowNo].title}}</td>
+			<td rowspan="2" class="col-sm-1"><a href="#/detail" ng-click="getRowNo(rowNo)">GET</a></td>
+		</tr>
+		<tr>
+			<td class="col-sm-3">rate:{{appInfos[rowNo].score}}/10</td>
+		</tr>
+	</table>
+</div>
+
+
